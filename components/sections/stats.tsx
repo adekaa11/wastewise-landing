@@ -2,10 +2,10 @@ import { ShiftCard } from "@/components/ui/shift-card";
 import { NumberTicker } from "@/components/ui/number-ticker";
 
 const STATS = [
-  { label: "Отходов в год", value: 4.1, decimals: 1, suffix: "М т", hint: "Объём ТБО, который ежегодно образуется в Казахстане." },
+  { label: "Отходов в год", value: 4.1, decimals: 1, suffix: "М т", hint: "Коммунальных отходов в год. Источник: БНС РК / Минэкологии РК, 2025." },
   { label: "Точность YOLO", value: 85.7, decimals: 1, suffix: "%", hint: "Средняя точность на тестовой выборке по 7 классам отходов." },
-  { label: "Экобоксов", value: 1000, decimals: 0, suffix: "+", hint: "Пункты приёма, к которым WasteWise может направить пользователя." },
-  { label: "Школ", value: 129, decimals: 0, suffix: "", hint: "Потенциальный охват пилота в Астане." }, // TODO: уточнить формулировку
+  { label: "Экобоксов", value: 1000, decimals: 0, suffix: "+", hint: "Экобоксов по стране. Источник: отчёт Правительства РК, «Таза Қазақстан», июнь 2025." },
+  { label: "Школ", value: 129, decimals: 0, suffix: "", hint: "Школ в программе. Источник: отчёт Правительства РК, «Таза Қазақстан», июнь 2025." },
 ];
 
 export function Stats() {
@@ -24,6 +24,9 @@ export function Stats() {
           bottom={s.hint}
         />
       ))}
+      <p className="col-span-full mt-2 text-xs text-white/30">
+        Источники: Бюро национальной статистики РК / Минэкологии РК (2025); материалы Правительства РК по программе «Таза Қазақстан» (июнь 2025). Точность модели — внутреннее тестирование WasteWise.
+      </p>
     </section>
   );
 }

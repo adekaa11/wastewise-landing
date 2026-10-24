@@ -1,8 +1,8 @@
 export const LINKS = {
   app: "https://wastewise-kz.streamlit.app",
   github: "https://github.com/adekaa11/wastewise",
-  telegram: "https://t.me/your_handle", // TODO: заменить
-  email: "mailto:your@email.com", // TODO: заменить
+  telegram: "https://t.me/crybaby_c",
+  email: "mailto:kadyrgazhyadilzhan@gmail.com",
 };
 
 export const WASTE_TYPES = [

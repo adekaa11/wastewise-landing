@@ -1,10 +1,10 @@
 import { ScrollReveal } from "@/components/ui/scroll-reveal";
 
-/** Замените заглушки на реальные скриншоты: <Image src="/screens/ecobox-1.png" ... /> */
+/** Плейсхолдеры в /public/screens — замените на реальные PNG/JPG с теми же именами (или поменяйте src) */
 const SHOTS = [
-  { title: "Карта экобоксов", emoji: "🗺️" },
-  { title: "История сканирований", emoji: "📸" },
-  { title: "Эко-викторина", emoji: "🧠" },
+  { title: "Карта экобоксов", src: "/screens/ecobox-1.svg" },
+  { title: "История сканирований", src: "/screens/ecobox-2.svg" },
+  { title: "Эко-викторина", src: "/screens/ecobox-3.svg" },
 ];
 
 export function EcoboxReveal() {
@@ -12,12 +12,8 @@ export function EcoboxReveal() {
     <section className="mx-auto grid max-w-7xl gap-6 px-4 pb-28 md:grid-cols-3">
       {SHOTS.map((s) => (
         <ScrollReveal key={s.title}>
-          <div className="grid aspect-[4/5] place-items-center rounded-3xl border border-white/10 bg-gradient-to-br from-forest-800 to-forest-950">
-            <div className="text-center">
-              <div className="text-7xl">{s.emoji}</div>
-              <p className="mt-4 font-medium text-white/70">{s.title}</p>
-            </div>
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img src={s.src} alt={s.title} loading="lazy" className="aspect-[4/5] w-full rounded-3xl border border-white/10 object-cover" />
         </ScrollReveal>
       ))}
     </section>
